@@ -1,3 +1,6 @@
+//sliding windows + heap(priorityqueue)
+//O(N)
+
 class Solution {
     public int longestSubarray(int[] nums, int limit) {
     	int maxLength = 0;
