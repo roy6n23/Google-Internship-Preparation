@@ -16,6 +16,7 @@ class Solution {
                     return e.importance;
                 }
                 for (int subId: e.subordinates) {
+                	//循环的列表没有改变
                     e.importance += getImportance(employees, subId);
                 }
                 return e.importance;
@@ -23,7 +24,8 @@ class Solution {
         }
         return 0;
     }
-    
+
+
      // 方法2：递归 + Map优化  每次递归时都遍历employees进行线性查找，可用map存储employee进行查询优化
     public int getImportance(List<Employee> employees, int id) {
         Map<Integer, Employee> map = new HashMap<>();
@@ -40,7 +42,7 @@ class Solution {
         }
         return employee.importance;
     }
-    
+
     
     /* 方法3：用队列或者栈存放待处理的结点，不用递归 */
     public int getImportance(List<Employee> employees, int id) {
