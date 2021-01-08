@@ -39,7 +39,6 @@ class Solution {
     	find(root.right, root, target);
     }
 
-
     private dfs(TreeNode root, List<Integer> collector, int distance){
     	if(root != null && !used.contains(root)){
     		used.add(root);
@@ -54,6 +53,4 @@ class Solution {
 
     	}
     }
-
-
 }
