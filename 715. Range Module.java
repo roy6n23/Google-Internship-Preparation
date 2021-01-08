@@ -28,6 +28,7 @@ class RangeModule {
         Range r = getRightRange(left, right);
         int lower = getLower(l, r, left, right);
         int upper = getUpper(l, r, left, right);
+        //移除中间的区间们
         ranges.subMap(lower, upper).clear();
 
         ranges.put(lower, new Range(lower, upper));
